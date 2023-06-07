@@ -1,0 +1,80 @@
+/* Estilos para la responsividad */
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+h2,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para la navegación */
+header {
+    text-align: center;
+    background: #000000eb;
+    color: #fff;
+    padding: 60px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#title {
+    text-align: center;
+}
+
+/* Estilos para la sección "hero" */
+#hero {
+    background: #ffffff;
+    padding: 100px;
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+#hero a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilos para las demás secciones */
+section {
+    padding: 100px;
+    text-align: center;
+}
+
+/* Estilos para el footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
