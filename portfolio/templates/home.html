@@ -1,12 +1,56 @@
-<h1>Welcome</h1>
+{% extends 'layout.html '%}
 
-{% for project in projects %}
+{% block content %}
 
-<h2>{{project.title}}</h2>
-<p>{{project.description}}</p>
-<img src="{{project.image.url}}" alt="{{project.title}}">
+{% load static %}
 
-{% if project.url %}
-<a href="{{project.url}}">{{project.url}}</a>
+<header class="row bg-black">
+    <div class="col emd-4">
+        <img src="{% static 'portfolio/perfil2.jpg' %}" alt="">
+    </div>
 
-{% endif %}{% endfor %}
+    <div class="col emd-8 my-auto">
+        <h1>I am Wilmer Rafael Narvaez</h1>
+        <h3>Pentester and Python Developer</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper metus ut nisi pulvinar accumsan.
+            Suspendisse potenti. Aliquam id lectus varius metus porttitor viverra sed vitae velit. Nam egestas, quam at
+            pulvinar consequat, est nisl ullamcorper turpis, vel interdum sapien nibh a turpis. Nunc sed ultrices
+            mauris. Donec eleifend quis velit in ornare. Nulla eu ornare nisl, sit amet posuere sem. Vivamus sed velit
+            tristique, sodales est id, efficitur felis. Cras vehicula eleifend lorem, id egestas purus bibendum id. Duis
+            malesuada lectus condimentum dolor interdum dapibus. Nam at lorem et nisl congue dictum id at enim.</p>
+        <a href="https://www.linkedin.com/in/wilmer-rafael-narvaez21" class="btn-primary btn-lg rounded-0 my-3"
+            target="_blank">Linkedin</a>
+    </div>
+
+</header>
+
+<div class="row my-4 text-center">
+    <h3>My projects</h3>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    {% for project in projects %}
+
+    <div class="col-md-4 p-4">
+        <div class="card bg-black card-project">
+            <img src="{{project.image.url}}" alt="{{project.title}}" class="card-img-top" />
+
+            <div class="card-body">
+
+                <h2>{{project.title}}</h2>
+                <p>{{project.description}}</p>
+
+                {% if project.url %}
+                <a href="{{project.url}}" class="btn btn-light rounded-0 btn-sm btn-primary btn-sn"
+                    target="_blank">{{project.url}}</a>
+
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+
+
+    {% endfor %}
+
+    {% endblock %}
+</div>
